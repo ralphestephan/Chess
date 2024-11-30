@@ -1,53 +1,54 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  
-  .chess-board {
-    display: grid;
-    grid-template-columns: repeat(8, 80px);
-    grid-template-rows: repeat(8, 80px);
-    border: 2px solid #333;
-    background-color: #fff;
-  }
-  
-  .chess-board div {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    font-weight: bold;
-    user-select: none;
-  }
-  
-  .chess-board .light {
-    background-color: #eee;
-  }
-  
-  .chess-board .dark {
-    background-color: #666;
-  }
-  
-  .chess-piece {
-    cursor: grab;
-  }
-  
-  .chess-piece:active {
-    cursor: grabbing;
-  }
-  
-  .highlight {
-    background-color: greenyellow;
-  }
-  #statusDisplay {
-    margin: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px); /* Smaller cell size for a compact board */
+  grid-template-rows: repeat(8, 60px);
+  border: 2px solid #333;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Modern shadow */
+}
+
+.chess-board div {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px; /* Adjusted size */
+  font-weight: bold;
+  user-select: none;
+}
+
+.chess-board .light {
+  background-color: #f0d9b5; /* Light beige like Chess.com */
+}
+
+.chess-board .dark {
+  background-color: #b58863; /* Dark brown */
+}
+
+.chess-piece {
+  cursor: grab;
+}
+
+.chess-piece:active {
+  cursor: grabbing;
+  opacity: 0.3;
+}
+
+#statusDisplay {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}

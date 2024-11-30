@@ -1,0 +1,3 @@
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:123@localhost:5432/chess_db'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+JWT_SECRET_KEY = '12345'

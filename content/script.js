@@ -118,41 +118,40 @@ document.addEventListener("DOMContentLoaded", () => {
     let fromRow, fromCol;
   
     document.addEventListener("dragstart", (e) => {
-      if (e.target.classList.contains("chess-piece")) {
-        draggedPiece = e.target;
-        fromRow = parseInt(draggedPiece.dataset.row);
-        fromCol = parseInt(draggedPiece.dataset.col);
-      }
-    });
-  
-    document.addEventListener("dragover", (e) => {
-      e.preventDefault();
-    });
-  
-    document.addEventListener("drop", (e) => {
-      const targetSquare = e.target.closest(".light, .dark");
-      if (targetSquare && draggedPiece) {
-        const toRow = parseInt(targetSquare.dataset.row);
-        const toCol = parseInt(targetSquare.dataset.col);
-        const piece = draggedPiece.dataset.piece;
-  
-        if (isValidMove(fromRow, fromCol, toRow, toCol, piece)) {
-          // Handle capturing
-          const targetPiece = boardState[toRow][toCol];
-          if (targetPiece !== " ") {
-            console.log(`${targetPiece} captured at (${toRow}, ${toCol})`);
-          }
-  
-          // Update board state
-          boardState[fromRow][fromCol] = " "; // Clear old position
-          boardState[toRow][toCol] = piece; // Move piece
-          updateBoard();
-  
-          // Switch turn
-          currentTurn = currentTurn === "white" ? "black" : "white";
+        if (e.target.classList.contains("chess-piece")) {
+          draggedPiece = e.target;
+          fromRow = parseInt(draggedPiece.dataset.row);
+          fromCol = parseInt(draggedPiece.dataset.col);
+          e.dataTransfer.effectAllowed = "move"; // Only allow 'move' effect
+        } else {
+          e.preventDefault(); // Prevent dragging non-piece elements
         }
-        draggedPiece = null;
-      }
-    });
+      });
+
+      document.addEventListener("dragover", (e) => {
+        e.preventDefault(); // Allow drop on valid targets
+      });
+
+      document.addEventListener("drop", (e) => {
+        e.preventDefault(); // Prevent default drop behavior
+        const targetSquare = e.target.closest(".light, .dark");
+        if (targetSquare && draggedPiece) {
+          const toRow = parseInt(targetSquare.dataset.row);
+          const toCol = parseInt(targetSquare.dataset.col);
+          const piece = draggedPiece.dataset.piece;
+
+          if (isValidMove(fromRow, fromCol, toRow, toCol, piece)) {
+            // Update board state
+            boardState[fromRow][fromCol] = " "; // Clear old position
+            boardState[toRow][toCol] = piece; // Move piece
+            updateBoard();
+
+            // Switch turn
+            currentTurn = currentTurn === "white" ? "black" : "white";
+          }
+          draggedPiece = null;
+        }
+      });
+
   });
   
