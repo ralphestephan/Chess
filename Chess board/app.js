@@ -5,7 +5,7 @@ const infoDisplay = document.querySelector('#info-display');
 const width = 8;
 
 
-let playerGo = 'black';
+let playerGo = 'white';
 // The position on the board the piece starts from
 let startPositionId = -1;
 let draggedElement;
@@ -13,7 +13,6 @@ let draggedElement;
 let taken, takenByOpponent;
 let targetId, startId, idInterval;
 let startRow, startCol, targetRow, targetCol;
-// How far apart are the rows and how far apart are the columns
 let rowInterval, colInterval;
 
 
@@ -42,7 +41,9 @@ function init() {
         square.addEventListener('dragover', dragOver);
         square.addEventListener('drop', dragDrop);
     });
+
 }
+
 
 function createBoard() {
     startPieces.forEach((startPiece, i) => {
@@ -53,7 +54,6 @@ function createBoard() {
         square.innerHTML = startPiece;
         square.firstChild?.setAttribute('draggable', 'true');
 
-        // Zero-based: first row = 0, second row = 1, etc...
         const row = Math.floor(i / 8);
 
         if (row % 2 === 0) {
@@ -62,7 +62,6 @@ function createBoard() {
             square.classList.add(i % 2 === 0 ? 'black-square' : 'white-square');
         }
 
-        // Determine the color of the pieces
         let pieceColor = '';
         if (i <= 15) {
             square.firstChild.firstChild.classList.add('white-piece');
@@ -72,8 +71,7 @@ function createBoard() {
             pieceColor = 'black';
         }
 
-        // Log the piece information
-        const pieceType = startPiece.trim(); // Assuming startPiece contains the piece type
+        const pieceType = startPiece.trim();
         console.log(`square ${i} ${pieceColor} ${pieceType}`);
 
         gameBoard.append(square);
@@ -84,8 +82,8 @@ function createBoard() {
 function dragStart(e) {
     draggedElement = e.target;
     startPositionId = draggedElement.parentNode.getAttribute('square-id');
-}
 
+}
 
 function dragOver(e) {
     //
@@ -93,8 +91,9 @@ function dragOver(e) {
 }
 
 
+let timerStarted = false;
+
 function dragDrop(e) {
-    //
     e.stopPropagation();
 
     correctGo = draggedElement.firstChild.classList.contains(playerGo + '-piece');
@@ -104,23 +103,65 @@ function dragDrop(e) {
 
     if (correctGo) {
         if (isValidMove(e.target)) {
-            // This will immediately reset the info display when a valid move is made before the notification reset timer clears the last notification
             notifyPlayer('', false);
+            if (!timerStarted) {
+                startTimer();
+                timerStarted = true;
+            }
             if (!taken) {
                 e.target.append(draggedElement);
-                // Only change players if the game is still ongoing
                 if (!checkWin()) changePlayer();
             } else if (takenByOpponent) {
                 document.getElementById(`${playerGo}-captures`).innerHTML += `<div class="captured-piece">${e.target.innerHTML}</div>`;
                 e.target.parentNode.append(draggedElement);
                 e.target.remove();
-                // Only change players if the game is still ongoing
                 if (!checkWin()) changePlayer();
             } else notifyPlayer('You can not go there!');
-        }
-        else notifyPlayer('You can not go there!');
+
+            // Check for pawn promotion
+            const squareId = parseInt(e.target.getAttribute('square-id'));
+            const isPawn = draggedElement.firstChild.classList.contains('pawn');
+            const isPromotionRow = (playerGo === 'white' && squareId >= 56) || (playerGo === 'black' && squareId <= 7);
+            console.log(`isPawn: ${isPawn}, isPromotionRow: ${isPromotionRow}, squareId: ${squareId}`);
+
+            if (isPawn && isPromotionRow) {
+                promotePawn(e.target, playerGo);
+            }
+        } else notifyPlayer('You can not go there!');
     }
 }
+
+let whiteTime = 300; // 5 minutes in seconds
+let blackTime = 300; // 5 minutes in seconds
+let timerInterval;
+
+function startTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        if (playerGo === 'white') {
+            whiteTime--;
+            updateTimerDisplay('white', whiteTime);
+            if (whiteTime <= 0) {
+                clearInterval(timerInterval);
+                alert('Black wins on time!');
+            }
+        } else {
+            blackTime--;
+            updateTimerDisplay('black', blackTime);
+            if (blackTime <= 0) {
+                clearInterval(timerInterval);
+                alert('White wins on time!');
+            }
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(player, time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    document.getElementById(`${player}-timer`).textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
 
 function notifyPlayer(message, useTimer = true) {
     infoDisplay.textContent = message;
@@ -131,10 +172,10 @@ function notifyPlayer(message, useTimer = true) {
 function changePlayer() {
     playerGo = playerGo === 'black' ? 'white' : 'black';
     playerDisplay.textContent = playerGo;
+    startTimer();
 }
 
 
-// Move validation lookup object
 const validMoves = {
     'pawn': () => {
         let direction = 1;
@@ -207,6 +248,36 @@ function isValidMove(target) {
     colInterval = targetCol - startCol;
 
     return validMoves[draggedElement.id]();
+}
+
+
+function promotePawn(square, pieceColor) {
+    const promotionChoices = ['queen', 'rook', 'bishop', 'knight'];
+    const promotionContainer = document.createElement('div');
+    promotionContainer.classList.add('promotion-container');
+
+    promotionChoices.forEach(choice => {
+        const choiceElement = document.createElement('div');
+        choiceElement.classList.add('promotion-choice');
+        choiceElement.textContent = choice;
+        choiceElement.addEventListener('click', () => {
+            square.innerHTML = `<div class="${pieceColor}-piece ${choice}"></div>`;
+            document.body.removeChild(promotionContainer);
+        });
+        promotionContainer.appendChild(choiceElement);
+    });
+
+    // Position the promotion container near the board
+    promotionContainer.style.position = 'absolute';
+    promotionContainer.style.top = '50%';
+    promotionContainer.style.left = '50%';
+    promotionContainer.style.transform = 'translate(-50%, -50%)';
+    promotionContainer.style.backgroundColor = 'white';
+    promotionContainer.style.border = '1px solid black';
+    promotionContainer.style.padding = '10px';
+    promotionContainer.style.zIndex = '1000';
+
+    document.body.appendChild(promotionContainer);
 }
 
 function checkWin() {
