@@ -1,0 +1,111 @@
+/* Modal Content */
+.modal-content {
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    border-bottom: 2px solid #e75e8d; /* Pink border */
+  }
+  
+  .modal-header .btn-close {
+    background-color: #e75e8d; /* Pink close button */
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* Modal Title */
+  .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    background-color: #333; /* Dark background for the form */
+    padding: 20px;
+  }
+  
+  /* Form Inputs */
+  .form-label {
+    color: #e75e8d; /* Pink label color */
+  }
+  
+  .form-control {
+    background-color: #555; /* Slightly lighter background for input fields */
+    border: 1px solid #777; /* Darker border */
+    color: white;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .form-control:focus {
+    border-color: #e75e8d; /* Pink border on focus */
+    background-color: #444; /* Darker background on focus */
+    box-shadow: 0 0 5px rgba(231, 94, 141, 0.8); /* Glow effect */
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #e75e8d; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d04f7f; /* Darker pink when hovered */
+  }
+  
+  .btn-secondary {
+    background-color: #4CAF50; /* Green cancel button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* Margin for cancel button */
+  .d-flex {
+    margin-top: 15px;
+  }
+  
+  .header-buttons .btn {
+    padding: 4px 12px;        /* Smaller padding for a compact button */
+    font-size: 12px;          /* Smaller font size */
+    border-radius: 5px;       /* Rounded corners */
+    border: none;             /* Remove border */
+    text-align: center;       /* Center the text */
+}
+
+.header-buttons .btn-outline-light {
+    background-color: grey;
+    color: white;
+}
+
+.header-buttons .btn-primary {
+    background-color: #e75e8d;
+    color: white;
+}
+
+.header-buttons .btn-outline-light:hover, 
+.header-buttons .btn-primary:hover {
+    opacity: 0.8; /* Add hover effect */
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Checkmate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/popup.css">
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+    <!-- Modal HTML for Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Login Form -->
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="loginUsername" placeholder="Enter username">
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter password">
+              </div>
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal HTML for Sign Up -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Sign Up Form -->
+            <form id="signupForm">
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+              </div>
+              <div class="mb-3">
+                <label for="signupUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="signupUsername" placeholder="Enter username">
+              </div>
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="signupPassword" placeholder="Enter password">
+              </div>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="llogoo.webp" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="play.html">Play</a></li>
+                        <li><a href="details.html" class="active">Details</a></li>
+                        <li><a href="profile.html">Profile <img id="navProfileImage" src="unnamed.png" alt="Profile Picture" class="profile-img"></a></li>
+                    </ul>   
+                    <div class="header-buttons">
+                      <!-- Log In Button - Triggers Log In Modal -->
+                      <a class="btn btn-outline-light btn-sm" 
+                         style="background-color: grey; color: white; border: none;"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#loginModal">Log In</a>
+      
+                      <!-- Sign Up Button - Triggers Sign Up Modal -->
+                      <a class="btn btn-primary btn-sm" 
+                         style="background-color: #e75e8d; color: white; border: none;"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#signupModal">Sign Up</a>
+                    </div>
+                    <!-- ***** Buttons End ***** -->
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Featured Start ***** -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="feature-banner header-text">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="unnamed.png" alt="" style="border-radius: 23px;">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="thumb">
+                      <img src="videoframe_10393.png" alt="" style="border-radius: 23px;">
+                      <a href="https://www.youtube.com/watch?v=6Pqd7UFWr7M" target="_blank"><i class="fa fa-play"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Featured End ***** -->
+
+          <!-- ***** Details Start ***** -->
+          <div class="game-details">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Chess Details</h2>
+              </div>
+              <div class="col-lg-12">
+                <div class="content">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="left-info">
+                        <div class="left">
+                          <h4>Chess</h4>
+                          <span>Online</span>
+                        </div>
+                        <ul>
+                          <li><i class="fa fa-star"></i> 4.9</li>
+                          <li><i class="fa fa-download"></i> 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="right-info">
+                        <ul>
+                          <li><i class="fa fa-star"></i> 4.9</li>
+                          <li><i class="fa fa-download"></i> 3</li>
+                          <li><i class="fa fa-gamepad"></i> Board</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="1.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="2.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="3.2.png" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-12">
+                      <p>Chess is a two-player strategy board game played on an 8x8 square board. Each player starts with 16 pieces: 1 king, 1 queen, 2 rooks, 2 knights, 2 bishops, and 8 pawns. The goal is to checkmate the opponent's king, meaning the king is in a position to be captured and cannot escape.</p>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="main-border-button">
+                        <a href="#">Play Chess Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Details End ***** -->
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+          
+          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/imageput.js"></script>
+
+
+  </body>
+
+</html>
