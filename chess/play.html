@@ -100,52 +100,36 @@
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="llogoo.webp" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Search End ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Search End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="play.html" class="active">Play</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="profile.html">Profile <img id="navProfileImage" src="unnamed.png" alt="Profile Picture" class="profile-img"></a></li>
-                    </ul>   
-                    <div class="header-buttons">
-                      <!-- Log In Button - Triggers Log In Modal -->
-                      <a class="btn btn-outline-light btn-sm" 
-                         style="background-color: grey; color: white; border: none;"
-                         data-bs-toggle="modal" 
-                         data-bs-target="#loginModal">Log In</a>
-      
-                      <!-- Sign Up Button - Triggers Sign Up Modal -->
-                      <a class="btn btn-primary btn-sm" 
-                         style="background-color: #e75e8d; color: white; border: none;"
-                         data-bs-toggle="modal" 
-                         data-bs-target="#signupModal">Sign Up</a>
-                    </div>
-                    <!-- ***** Buttons End ***** -->
-                    <div class="header-buttons">
-                      <a class="menu-trigger">
-                        <span>Menu</span>
-                      </a>
-                    </div>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="llogoo.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Search Start ***** -->
+            <div class="search-input">
+              <form id="search" action="#">
+                <input type="text" placeholder="Search players" id="searchText" name="searchKeyword" onkeypress="handle" />
+                <i class="fa fa-search"></i>
+              </form>
             </div>
+            <!-- ***** Search End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="play.html"  class="active">Play</a></li>
+              <li><a href="details.html">Details</a></li>
+              <li><a href="profile.html">Profile <img id="navProfileImage" src="unnamed.png" alt="Profile Picture" class="profile-img"></a></li>
+            </ul>
+            
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+          </nav>
         </div>
+      </div>
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -159,19 +143,43 @@
           <div class="start-stream">
             <div class="col-lg-12">
               <div class="heading-section">
+                <div id="titleMode" class="heading-section">
+                  <h4><em>Select</em> Gamemode</h4>
+                </div>                
                 <div class="col-lg-12">
                   <div class="image-links">
                     <!-- Play Friend Image -->
                     <div class="play-options">
-                      <div class="play-option">
-                        <img src="hang.jpg" alt="Play Person" class="play-image">
-                        <div class="hover-text">Play Person</div>
+                      <div id="offlineImage" class="play-option">
+                        <img src="offline2.png" alt="Play Offline" class="play-image" >
+                        <div class="hover-text">Play Offline</div>
                       </div>
-                      <div class="play-option">
-                        <img src="robot.avif" alt="Play Robot" class="play-image">
-                        <div class="hover-text">Play Robot</div>
+                      <div id="onlineImage" class="play-option">
+                        <img  src="online1.png" alt="Play Online" class="play-image">
+                        <div class="hover-text">Play Online</div>
                       </div>
+
+                      <div id="offlineImage1" class="play-option hidden">
+                        <img src="stockfish.png" alt="Play Offline" class="play-image">
+                        <div class="hover-text" style="color: white;">Play Bots</div>
+                      </div>
+                      <div id="offlineImage2" class="play-option hidden">
+                        <img src="2players.png" class="play-image">
+                        <div class="hover-text" style="color: white;">Player vs Player</div>
+                      </div>    
+                      <div id="onlineImage1" class="play-option hidden">
+                        <img src="friends.png" alt="My Friends" class="play-image">
+                        <div class="hover-text" style="color: white;">Play a Friend</div>
+                      </div>
+                      <div id="onlineImage2" class="play-option hidden">
+                        <img src="randoms.png" class="play-image">
+                        <div class="hover-text" style="color: white;">Play Randoms</div>
+                      </div>    
+                      <div class="main-button" id="backButton" style="display: none;">
+                        <a href="#" onclick="return false;">Back</a>
+                      </div>                
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -200,9 +208,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+          <p>Copyright © 2024 <a href="#">Checkmate</a> Company. All rights reserved. 
           
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+          <br>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> <a>-</a>
+          <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> <a>-</a>
+          <a href="https://ralphproject.netlify.app/" target="_blank" >Ralph Stephan</a>
+
+
+        </p>
         </div>
       </div>
     </div>
@@ -219,7 +232,7 @@
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/imageput.js"></script>
 
-
+<script src="playscript.js"></script>
 </body>
 
 </html>
