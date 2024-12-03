@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Checkmate</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/css/templatemo-cyborg-gaming.css">
+  <link rel="stylesheet" href="../assets/css/owl.css">
+  <link rel="stylesheet" href="../assets/css/animate.css">
+  <link rel="stylesheet" href="../https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../assets/css/popup.css">
+  <link href="styles.css" rel="stylesheet">
+
+  <style>
+    /* Add the hover effect for the Review button */
+    .main-border-button a:hover {
+      background-color: #ec6090; /* Change to #ec6090 when hovered */
+      color: white; /* Make the text white */
+      border-color: #ec6090; /* Optional: Change border color to match the hover background */
+    }
+
+    /* Styling for the profile picture */
+    .profile-img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 3px solid #ccc;
+    }
+
+    /* Grey silhouette image */
+    .profile-img-placeholder {
+      background-color: #e0e0e0;
+      display: block;
+      text-align: center;
+      line-height: 150px;
+      color: #888;
+      font-size: 20px;
+    }
+
+    /* Hide the file input */
+    .file-input {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+ <!-- Modal HTML for Login -->
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Login Form -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="loginUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="loginUsername" placeholder="Enter username">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal HTML for Sign Up -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Sign Up Form -->
+        <form id="signupForm">
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+          </div>
+          <div class="mb-3">
+            <label for="signupUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="signupUsername" placeholder="Enter username">
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../index.html" class="logo">
+              <img src="../llogoo.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Search Start ***** -->
+            <div class="search-input">
+              <form id="search" action="#">
+                <input type="text" placeholder="Search players" id="searchText" name="searchKeyword" onkeypress="handle" />
+                <i class="fa fa-search"></i>
+              </form>
+            </div>
+            <!-- ***** Search End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="../index.html" >Home</a></li>
+              <li><a href="../play.html">Play</a></li>
+              <li><a href="../details.html" >Details</a></li>
+              <li><a href="../profile.html" class="active">Profile <img id="navProfileImage" src="../unnamed.png" alt="Profile Picture" class="profile-img"></a></li>
+            </ul>
+            
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+          <div id="turn-indicator" class="turn-indicator">White's Turn</div>
+
+          <!-- ***** Banner Start ***** -->
+          
+          <!-- ***** Banner End ***** -->
+          <div class="gaming-library profile-library">
+            
+            <div class="col-lg-12">
+              
+                <div class="game-container">
+                  <div class="chessBoard">     
+
+                    <!-- Add the pawn div element -->
+                    <div class="square white">
+                      <div class="piece rook" color="black"  >
+                          <img src="Black-Rook.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece knight" color="black" >
+                          <img src="Black-Knight.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece bishop" color="black" >
+                          <img src="Black-Bishop.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece queen" color="black" >
+                          <img src="Black-Queen.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece king" color="black" >
+                          <img src="Black-King.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece bishop" color="black" >
+                          <img src="Black-Bishop.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece knight" color="black">
+                          <img src="Black-Knight.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="coordinate rank whiteText">8</div>
+              
+                      <div class="piece rook" color="black" >
+                          <img src="Black-Rook.png" alt="pawn" >
+                        </div>
+                    </div>
+                   <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square black">
+                      <div class="piece pawn" color="black"  >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="black" >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="black" >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="black" >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="black"  >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="black"  >
+                          <img src="Black-Pawn.png" alt="pawn">
+                        </div>
+              
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="black"  >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                    <div class="square white">
+                      <div class="coordinate rank blackText">7</div>
+              
+                      <div class="piece pawn" color="black"  >
+                          <img src="Black-Pawn.png" alt="pawn" >
+                        </div>
+              
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black">
+                      <div class="coordinate rank whiteText">6</div>
+              
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white">
+                      <div class="coordinate rank blackText">5</div>
+              
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black">
+                      <div class="coordinate rank whiteText">4</div>
+              
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white"></div>
+                    <div class="square black"></div>
+                    <div class="square white">
+                      <div class="coordinate rank blackText">3</div>
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square white">
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="white"  >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="white">
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square white">
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                    <div class="square black">
+                      <div class="coordinate rank whiteText">2</div>
+              
+                      <div class="piece pawn" color="white" >
+                          <img src="white-pawn.png" alt="pawn" >
+                        </div>
+                    </div>
+                  <!-- ------------------------------------------------------------------------- -->
+              
+                    <div class="square black">
+                      <div class="coordinate whiteText">a</div>
+              
+                      <div class="piece rook" color="white">
+                          <img src="White-Rook.png" alt="pawn" >
+                         </div>
+                    </div>
+                    <div class="square white"> 
+                      <div class="coordinate blackText">b</div>
+              
+                      <div class="piece knight" color="white">
+                          <img src="White-Knight.png" alt="knight" >
+                         </div>
+                  </div>
+                    <div class="square black">
+                      <div class="coordinate whiteText">c</div>
+              
+                      <div class="piece bishop" color="white">
+                          <img src="White-Bishop.png" alt="bishop">
+                         </div>
+                    </div>
+                    <div class="square white">
+                      <div class="coordinate blackText">d</div>
+              
+                      <div class="piece queen" color="white" >
+                          <img src="White-Queen.png" alt="queen" >
+                         </div>
+                    </div>
+                    <div class="square black">
+                      <div class="coordinate whiteText">e</div>
+              
+                      <div class="piece king" color="white">
+                          <img src="White-King.png" alt="king">
+                      </div>
+                    </div>
+                    <div class="square white">
+                      <div class="coordinate blackText">f</div>
+                      <div class="piece bishop" color="white" >
+                          <img src="White-Bishop.png" alt="bishop" >
+                         </div>
+                    </div>
+                    <div class="square black">
+                      <div class="coordinate whiteText">g</div>
+              
+                      <div class="piece knight" color="white" >
+                          <img src="White-Knight.png" alt="knight">
+                         </div>
+                    </div>
+                    <div class="square white">
+                      <div class="coordinate rank blackText">1</div>
+                      <div class="coordinate blackText">h</div>     
+                      <div class="piece rook" color="white" >
+                          <img src="White-Rook.png" alt="pawn" >
+                         </div>
+                    </div>
+                  </div>
+                  <!-- Timer Container -->
+<div class="timer-container">
+  <div class="player-timer" id="white-timer">
+    <h3>White's Time</h3>
+    <p id="white-time">05:00</p>
+  </div>
+  <div class="player-timer" id="black-timer">
+    <h3>Black's Time</h3>
+    <p id="black-time">05:00</p>
+  </div>
+</div>
+
+                  <div id="alert">
+                   
+                  </div>
+                   
+                </div>
+                <script src="main.js"></script>
+            </div>
+          </div>
+          <!-- ***** Gaming Library Start ***** -->
+         
+          <!-- ***** Gaming Library End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">Checkmate</a> Company. All rights reserved. 
+          
+          <br>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> <a>-</a>
+          <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> <a>-</a>
+          <a href="https://ralphproject.netlify.app/" target="_blank" >Ralph Stephan</a>
+
+
+        </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/tabs.js"></script>
+  <script src="../assets/js/popup.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/imageget.js"></script>
+
+</body>
+
+</html>
