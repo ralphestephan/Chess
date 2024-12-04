@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mainCss.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chess Profile</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../css/images/logo.png" alt="Checkmate Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search players">
+        </div>
+        <div class="header-right">
+            <ul class="nav-links">
+                <li>
+                    <a href="../Home Page/index.html" class="nav-link">
+                        <div class="home">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Play/index.html" class="nav-link">
+                        <div class="play">Play</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Details/index.html" class="nav-link">
+                        <div class="details">Details</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="profile">
+                            <div class="profile-text">Profile</div>
+                            <img src="../css/images/unnamed.png" alt="profile pic">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-info">
+                    <div class="avatar">
+                        <img src="../css/images/unnamed.png" alt="Pawn Avatar">
+                        <span class="status">Online</span>
+                    </div>
+                    <div class="profile-details">
+                        <h2>Guest</h2>
+                        <p>Boost your rank by winning more Games!</p>
+                        <button class="play-game">Play Game</button>
+                    </div>
+                </div>
+                <div class="stats">
+                    <p>Rank <span>600</span></p>
+                    <p>Games Played <span>10</span></p>
+                    <p>Win Rate <span>80%</span></p>
+                    <p class="lastLine">Friends <span>3</span></p>
+                </div>
+            </div>
+        </section>
+        <section class="friends-section">
+            <h2>My <span>Friends</span></h2>
+            <table class="friends-list">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Rank</th>
+                        <th>Games</th>
+                        <th>Win Rate</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player1</td>
+                        <td>650</td>
+                        <td>25</td>
+                        <td>72%</td>
+                        <td><button class="challenge-btn">Challenge</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

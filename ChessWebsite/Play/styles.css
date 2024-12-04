@@ -1,0 +1,105 @@
+.hero {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    background-image: url('images/background3.jpg');
+    background-size: cover; /* Use cover to ensure the image covers the container */
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 30px 20px; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    text-align: center;
+    max-width: 1200px;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto; 
+    align-items: center;
+}
+
+.modes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 150px; /* Ensure all images have the same width */
+    height: auto; /* Maintain aspect ratio */
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+.image-container:hover img {
+    filter: blur(10px); /* Apply blur effect on hover */
+}
+
+.hover-text {
+    font-family: 'Poppins';
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 30px;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+    z-index: 10;
+}
+
+.image-container:hover .hover-text {
+    opacity: 1; 
+}
+
+h2 {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+#originalImages,
+#offlineModes,
+#onlineModes {
+    display: flex;
+    gap: 80px; /* Apply gap between images */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers child elements horizontally */
+}
+
+#backButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; /* Initially hidden */
+    border-radius: 40px;
+}
+
+#backButton:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+#offlineImage1{
+    width: 188px;
+}

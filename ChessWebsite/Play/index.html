@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkmate</title>
+    <link rel="stylesheet" href="../css/mainCss.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../css/images/logo.png" alt="Checkmate Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search players">
+        </div>
+        <div class="header-right">
+            <ul class="nav-links">
+                <li>
+                    <a href="../Home Page/index.html" class="nav-link">
+                        <div class="home">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link active">
+                        <div class="play">Play</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Details/index.html" class="nav-link">
+                        <div class="details">Details</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Profile/index.html">
+                        <div class="profile">
+                            <div class="profile-text">Profile</div>
+                            <img src="../css/images/unnamed.png" alt="profile pic">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="content">
+                <h2 id="titleMode">Select <span class="highlight">Gamemode</span></h2>
+                <div class="modes">
+                    <!-- Original Images -->
+                    <div id="originalImages">
+                        <div class="image-container" onclick="handleOfflineClick()">
+                            <img id="offlineImage" src="images/offline.png" alt="Image 1" class="offline-image">
+                            <div class="hover-text">Offline Mode</div>
+                        </div>
+                        <div class="image-container" onclick="handleOnlineClick()">
+                            <img id="onlineImage" src="images/online.png" alt="Image 2" class="online-image">
+                            <div class="hover-text">Online Mode</div>
+                        </div>
+                    </div>
+                    <!-- New Images -->
+                    <div id="newImages" style="display: none;">
+                        <!-- Offline Mode Images -->
+                        <div id="offlineModes" style="display: none;">
+                            <div class="image-container">
+                                <img id="offlineImage1" src="images/stockfish.png" alt="Offline Image 1">
+                                <div class="hover-text">Stockfish</div>
+                            </div>
+                            <div class="image-container">
+                                <img id="offlineImage2" src="images/2players.png" alt="Offline Image 2">
+                                <div class="hover-text">Two Players</div>
+                            </div>
+                        </div>
+                        <!-- Online Mode Images -->
+                        <div id="onlineModes" style="display: none;">
+                            <div class="image-container">
+                                <img id="onlineImage1" src="images/friends.png" alt="Online Image 1">
+                                <div class="hover-text">Play Friends</div>
+                            </div>
+                            <div class="image-container">
+                                <img id="onlineImage2" src="images/randoms.png" alt="Online Image 2">
+                                <div class="hover-text">Play Randoms</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="backButton" style="display: none;">Back</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <p>Copyright © 2024 Checkmate Company. All rights reserved.</p>
+        <p>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> - <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> - <a href="https://ralphproject.netlify.app/" target="_blank">Ralph Stephan</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

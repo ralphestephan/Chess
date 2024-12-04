@@ -1,0 +1,162 @@
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 20px;
+    width: 1200px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+}
+
+.status {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.profile{
+    color:#4CAF50;
+    background-color: white;
+}
+
+.profile-details h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.play-game {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-game:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    color: #777;
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.stats p {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.stats p:last-child {
+    border-bottom: none;
+}
+.stats span {
+    color: #4CAF50;
+    margin-left: 20px;
+}
+
+/* Friends Section */
+.friends-section {
+    margin: 20px auto;
+    width: 1200px;
+    text-align: center;
+}
+
+.friends-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.friends-section h2 span {
+    color: #4CAF50;
+}
+
+.friends-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.friends-list th, .friends-list td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.friends-list th {
+    background-color: #252525;
+    color: #fff;
+}
+
+.friends-list td {
+    color: #777;
+}
+
+.challenge-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.challenge-btn:hover {
+    background-color: white;
+    color: #4CAF50;
+}
