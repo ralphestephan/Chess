@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkmate</title>
+    <link rel="stylesheet" href="../css/mainCss.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../css/images/logo.png" alt="Checkmate Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search players">
+        </div>
+        <div class="header-right">
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="nav-link active">
+                        <div class="home">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Play/index.html" class="nav-link">
+                        <div class="play">Play</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Details/index.html" class="nav-link">
+                        <div class="details">Details</div>
+                    </a>
+                </li>
+                <li>
+                  <div id="auth-section">
+                    <button class="btn login-btn" onclick="openPopup('loginPopup')">Login</button>
+                    <button class="btn signup-btn" onclick="openPopup('signupPopup')">Sign Up</button>
+                  </div>
+                  <div id="game-section" style="display: none;">
+                    <a href="../Profile/index.html">
+                        <div class="profile">
+                            <div class="profile-text">Profile</div>
+                            <img src="../css/images/unnamed.png" alt="profile pic">
+                        </div>
+                    </a>
+                  </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="content">
+                <h1>Welcome to Our Website</h1>
+                <h2>Play and enjoy <span class="highlight">Chess</span></h2>
+                <div id="auth-section">
+                 <div class="buttons">
+                    <!-- Login Button -->
+                    <button class="login" onclick="openPopup('loginPopup')">Login</button>
+        
+                    <!-- Sign Up Button -->
+                    <button class="signup" onclick="openPopup('signupPopup')">Sign Up</button>
+                </div>
+                </div>
+                <div id="game-section" style="display: none;"> <button class="play-game">Play Game</button> </div>
+            </div>
+        </div>
+        
+<!-- Popup for Login -->
+<div id="loginPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+      <h2>Log In</h2>
+      <form id="loginForm" onsubmit="return validateLogin()">
+        <div class="form-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" placeholder="Enter username">
+          <div class="error-message" id="loginUsernameError">Please enter your username</div>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password">
+          <div class="error-message" id="loginPasswordError">Please enter your password</div>
+        </div>
+        <button type="submitlogin" class="btn">Log In</button>
+        <p class="signup-link">Don't have an account? <a href="javascript:void(0);" onclick="openPopup('signupPopup')">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Popup for Sign Up -->
+  <div id="signupPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('signupPopup')">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm" onsubmit="return validateSignup()">
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="Enter email">
+          <div class="error-message" id="signupEmailError">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" placeholder="Enter username">
+          <div class="error-message" id="signupUsernameError">Please enter your username</div>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Enter password">
+          <div class="error-message" id="signupPasswordError">Please enter your password</div>
+        </div>
+        <button type="submitsignup" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+          
+    </main>
+    <footer>
+        <p>Copyright © 2024 Checkmate Company. All rights reserved.</p>
+        <p>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> - <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> - <a href="https://ralphproject.netlify.app/" target="_blank">Ralph Stephan</a></p>
+    </footer>
+    <script src="../css/popupscript.js"></script>
+</body>
+</html>

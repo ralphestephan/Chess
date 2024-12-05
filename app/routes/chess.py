@@ -91,3 +91,34 @@ def get_game(game_id):
     if not game:
         return jsonify({'message': 'Game not found'}), 404
     return jsonify({'game_id': game.id, 'board_state': json.loads(game.board_state), 'turn': game.turn}), 200
+
+
+@chess_bp.route('/end', methods=['POST'])
+def end_game():
+    """Endpoint to mark the game as ended and store the winner."""
+    data = request.json
+    game_id = data.get('game_id')
+
+    if not game_id:
+        return jsonify({"message": "Game ID is required"}), 400
+
+    try:
+        # Find the game
+        game = Game.query.get(game_id)
+        if not game:
+            return jsonify({"message": "Game not found"}), 404
+
+        # Determine the winner based on whose turn it is
+        if game.turn == 'white':
+            game.winner = game.player_black  # Black wins if it's White's turn and game ends
+        else:
+            game.winner = game.player_white  # White wins if it's Black's turn and game ends
+
+        db.session.commit()
+
+        return jsonify({"message": "Game ended successfully", "winner": game.winner}), 200
+    except Exception as e:
+        print(f"Error ending game: {e}")
+        db.session.rollback()
+        return jsonify({"message": "Failed to end game"}), 500
+

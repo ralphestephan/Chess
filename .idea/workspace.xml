@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1513f109-2d77-4aa9-aa34-eef3f0b3f68f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/Details/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/Details/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/Profile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/Profile/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/fonts/Poppins.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/searchicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/unnamed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/images/videoframe_10393.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/mainCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/css/popupscript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-Bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-King.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-Knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-Pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-Queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/Black-Rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-Bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-King.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-Knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-Pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-Queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/White-Rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/fonts/digital-7.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playoffline/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/images/create.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/images/join.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-Bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-King.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-Knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-Pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-Queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/Black-Rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-Bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-King.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-Knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-Pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-Queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/pieces/White-Rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChessWebsite/playonline/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ChessWeb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/chess.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/chess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/online/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/online/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/12cbc6307483_updates.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2pZ9d6U6ZmZ40FltTO2Cmh8winA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.chess.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.play.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ralph/PycharmProjects/ChessWeb/ChessWeb/chess/assets/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\chess\assets\css" />
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\app\routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\ChessWebsite" />
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\temp" />
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\ChessWebsite\playonline" />
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\app" />
+      <recent name="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\chess" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="ChessWeb" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ralph\PycharmProjects\ChessWeb\ChessWeb\run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1513f109-2d77-4aa9-aa34-eef3f0b3f68f" name="Changes" comment="" />
+      <created>1732962814466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732962814466</updated>
+      <workItem from="1732962815832" duration="332000" />
+      <workItem from="1732963471472" duration="39570000" />
+      <workItem from="1733326976846" duration="33402000" />
+      <workItem from="1733405256542" duration="267000" />
+      <workItem from="1733405536195" duration="1575000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChessWeb$run.coverage" NAME="run Coverage Results" MODIFIED="1733398844161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChessWeb$main.coverage" NAME="run Coverage Results" MODIFIED="1733234191530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

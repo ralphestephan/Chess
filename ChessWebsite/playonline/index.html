@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkmate</title>
+    <link rel="stylesheet" href="../css/mainCss.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../css/images/logo.png" alt="Checkmate Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search players">
+        </div>
+        <div class="header-right">
+            <ul class="nav-links">
+                <li>
+                    <a href="../Home Page/index.html" class="nav-link">
+                        <div class="home">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Play/index.html" class="nav-link">
+                        <div class="play">Play</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Details/index.html" class="nav-link">
+                        <div class="details">Details</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Profile/index.html">
+                        <div class="profile">
+                            <div class="profile-text">Profile</div>
+                            <img src="../css/images/unnamed.png" alt="profile pic">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+<div class="container">
+    <h1 style="text-align: center;">Select Mode</h1>
+
+    <!-- Authentication Section -->
+    <div id="auth-section" style="display: none;">
+        <h2>Authentication</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="sign-up">Sign Up</button>
+        <button id="sign-in">Sign In</button>
+    </div>
+
+    <!-- Game Options Section -->
+    <div id="game-section">
+        <button id="create-game" onclick="document.getElementById('chessboard').style.display = 'grid'">
+            <img src="images/create.png" alt="Create Game">
+        </button>
+        <button id="join-game" onclick="document.getElementById('chessboard').style.display = 'grid'; document.getElementById('chessboard').classList.add('flipped')">
+            <img src="images/join.png" alt="Join Game">
+        </button>
+    </div>
+
+    <!-- Chessboard Section -->
+    <div id="chessboard" class="board" style="display:none; margin-top: 20px;"></div>
+
+    
+</div>
+
+    <footer>
+        <p>Copyright © 2024 Checkmate Company. All rights reserved.</p>
+        <p>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> - <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> - <a href="https://ralphproject.netlify.app/" target="_blank">Ralph Stephan</a></p>
+    </footer>
+    
+      <script src="script.js"></script>
+    
+    
+    </body>
+    
+    </html>
