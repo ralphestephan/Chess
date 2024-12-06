@@ -222,6 +222,7 @@ function isKingInCheck(board, color) {
 // Validate a move and ensure the king isn't left in check
 function validateMoveAndKingSafety(from, to, piece, board, color, kingMoved, rookMoved, lastMove) {
     // Validate the move for the piece
+
     if (!validateMove(from, to, piece, board)) {
         return false; // Invalid move
     }
@@ -386,8 +387,30 @@ async function makeMove(from, to, promotionChoice = "q") {
     const piece = board[from[0]][from[1]];
     const color = piece === piece.toUpperCase() ? "white" : "black";
 
+    let turn;
+    try {
+        const response = await fetch(`${API_URL}/chess/game/${gameId}`);
+        const result = await response.json();
+
+        if (response.ok) {
+            turn = result.turn; // Assuming the API returns the current turn in the "turn" field
+        } else {
+            alert("Error fetching the current turn.");
+            return;
+        }
+    } catch (error) {
+        console.error("Error fetching turn:", error);
+        alert("Failed to validate the turn. Please try again.");
+        return;
+    }
+
+    // Validate if it's the current player's turn
+    if ((turn === "white" && color !== "white") || (turn === "black" && color !== "black")) {
+        alert("Invalid move. It's not your turn!");
+        return;
+    }
     // Validate the move
-    if (!validateMoveAndKingSafety(from, to, piece, board, color, kingMoved, rookMoved, lastMove)) {
+    if (!validateMoveAndKingSafety( from, to, piece, board, color, kingMoved, rookMoved, lastMove)) {
         alert("Invalid move. Your king would be in check or the move is invalid!");
         return;
     }
@@ -521,6 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = await response.json();
             gameId = result.game_id;
             board = result.board_state;
+            document.getElementById("game-section").style.display= "none";
             initializeBoard(); // Render the board
             document.getElementById("chessboard").style.display = "grid"; // Show the chessboard
             alert(`Game created! Share this Game ID: ${gameId}`);
@@ -547,6 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initializeBoard(); // Render the board
             document.getElementById("chessboard").style.display = "grid"; // Show the chessboard
             alert("Joined the game successfully!");
+            document.getElementById("game-section").style.display= "none";
             startPolling(); // Start polling for updates
         } catch (error) {
             alert(`Error joining game: ${error.message}`);

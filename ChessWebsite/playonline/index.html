@@ -45,11 +45,10 @@
     </header>
 
 <div class="container">
-    <h1 style="text-align: center;">Select Mode</h1>
+
 
     <!-- Authentication Section -->
-    <div id="auth-section" style="display: none;">
-        <h2>Authentication</h2>
+    <div id="auth-section">
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
         <button id="sign-up">Sign Up</button>
@@ -57,17 +56,20 @@
     </div>
 
     <!-- Game Options Section -->
-    <div id="game-section">
-        <button id="create-game" onclick="document.getElementById('chessboard').style.display = 'grid'">
-            <img src="images/create.png" alt="Create Game">
+    <div id="game-section" style="display: none">
+        <h1 style="text-align: center;">Select Mode</h1>
+        <button id="create-game" onclick="document.getElementById('chessboard').style.display = 'grid'">Create Game<img src="images/create.png" alt="Create Game">
         </button>
-        <button id="join-game" onclick="document.getElementById('chessboard').style.display = 'grid'; document.getElementById('chessboard').classList.add('flipped')">
-            <img src="images/join.png" alt="Join Game">
+        <button id="join-game" onclick="document.getElementById('chessboard').style.display = 'grid'; document.getElementById('chessboard').classList.add('flipped')">Join Game<img src="images/join.png" alt="Join Game">
         </button>
     </div>
 
-    <!-- Chessboard Section -->
-    <div id="chessboard" class="board" style="display:none; margin-top: 20px;"></div>
+
+<!-- Chessboard Section -->
+<div id="chessboard" class="board" style="display:none; margin-top: 20px;"></div>
+
+
+
 
     
 </div>
@@ -77,7 +79,7 @@
         <p>Developers: <a href="https://sla7er.github.io/ProjectX/welcome/welcome.html" target="_blank">Elie Bou Assi</a> - <a href="https://chihobix.github.io/web/mainPage/mainPage.html" target="_blank">Mathieu Chiha</a> - <a href="https://ralphproject.netlify.app/" target="_blank">Ralph Stephan</a></p>
     </footer>
     
-      <script src="script.js"></script>
+      <script src="../playonline/script.js"></script>
     
     
     </body>

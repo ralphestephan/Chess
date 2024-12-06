@@ -33,18 +33,12 @@
                     </a>
                 </li>
                 <li>
-                    <div id="auth-section">
-                        <button class="btn login-btn" onclick="openPopup('loginPopup')">Login</button>
-                        <button class="btn signup-btn" onclick="openPopup('signupPopup')">Sign Up</button>
-                      </div>
-                      <div id="game-section" style="display: none;">
-                        <a href="../Profile/index.html">
-                            <div class="profile">
-                                <div class="profile-text">Profile</div>
-                                <img src="../css/images/unnamed.png" alt="profile pic">
-                            </div>
-                        </a>
-                      </div>
+                    <a href="../Profile/index.html">
+                        <div class="profile">
+                            <div class="profile-text">Profile</div>
+                            <img src="../css/images/unnamed.png" alt="profile pic">
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -58,36 +52,34 @@
                     <!-- Original Images -->
                     <div id="originalImages">
                         <div class="image-container" onclick="handleOfflineClick()">
-                            <img id="offlineImage" src="images/offline.png" alt="Image 1" class="offline-image">
+                            <img id="offlineImage" src="../Play/images/offline.png" alt="Image 1" class="offline-image">
                             <div class="hover-text">Offline Mode</div>
                         </div>
                         <div class="image-container" onclick="handleOnlineClick()">
-                            <img id="onlineImage" src="images/online.png" alt="Image 2" class="online-image">
+                            <img id="onlineImage" src="../Play/images/online.png" alt="Image 2" class="online-image">
                             <div class="hover-text">Online Mode</div>
                         </div>
                     </div>
                     <!-- New Images -->
                     <div id="newImages" style="display: none;">
-                        <!-- Offline Mode Images -->
                         <div id="offlineModes" style="display: none;">
                             <div class="image-container">
-                                <img id="offlineImage1" src="images/stockfish.png" alt="Offline Image 1">
-                                <div class="hover-text">Stockfish</div>
+                                <img id="offlineImage1" src="../Play/images/stockfish.png" alt="Offline Image 1">
+                                <div class="hover-text">Coming Soon</div>
                             </div>
-                            <div class="image-container">
-                                <img id="offlineImage2" src="images/2players.png" alt="Offline Image 2">
+                            <div class="image-container" onclick="handleOffline1Click()">
+                                <img id="offlineImage2" src="../Play/images/2players.png" alt="Offline Image 2">
                                 <div class="hover-text">Two Players</div>
                             </div>
                         </div>
-                        <!-- Online Mode Images -->
                         <div id="onlineModes" style="display: none;">
-                            <div class="image-container">
-                                <img id="onlineImage1" src="images/friends.png" alt="Online Image 1">
-                                <div class="hover-text">Play Friends</div>
+                            <div class="image-container"  onclick="handleOnline1Click()">
+                                <img id="onlineImage1" src="../Play/images/friends.png" alt="Online Image 1">
+                                <div class="hover-text">Custom Games</div>
                             </div>
                             <div class="image-container">
-                                <img id="onlineImage2" src="images/randoms.png" alt="Online Image 2">
-                                <div class="hover-text">Play Randoms</div>
+                                <img id="onlineImage2" src="../Play/images/randoms.png" alt="Online Image 2">
+                                <div class="hover-text">Coming Soon</div>
                             </div>
                         </div>
                     </div>
@@ -95,54 +87,7 @@
                 <button id="backButton" style="display: none;">Back</button>
             </div>
         </div>
-        <!-- Popup for Login -->
-<div id="loginPopup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('loginPopup')">&times;</span>
-      <h2>Log In</h2>
-      <form id="loginForm" onsubmit="return validateLogin()">
-        <div class="form-group">
-          <label for="loginUsername">Username</label>
-          <input type="text" id="loginUsername" placeholder="Enter username">
-          <div class="error-message" id="loginUsernameError">Please enter your username</div>
-        </div>
-        <div class="form-group">
-          <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" placeholder="Enter password">
-          <div class="error-message" id="loginPasswordError">Please enter your password</div>
-        </div>
-        <button type="submitlogin" class="btn">Log In</button>
-        <p class="signup-link">Don't have an account? <a href="javascript:void(0);" onclick="openPopup('signupPopup')">Sign up here</a></p>
-      </form>
-    </div>
-  </div>
-  
-  <!-- Popup for Sign Up -->
-  <div id="signupPopup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('signupPopup')">&times;</span>
-      <h2>Sign Up</h2>
-      <form id="signupForm" onsubmit="return validateSignup()">
-        <div class="form-group">
-          <label for="signupEmail">Email</label>
-          <input type="email" id="signupEmail" placeholder="Enter email">
-          <div class="error-message" id="signupEmailError">Please enter a valid email</div>
-        </div>
-        <div class="form-group">
-          <label for="signupUsername">Username</label>
-          <input type="text" id="signupUsername" placeholder="Enter username">
-          <div class="error-message" id="signupUsernameError">Please enter your username</div>
-        </div>
-        <div class="form-group">
-          <label for="signupPassword">Password</label>
-          <input type="password" id="signupPassword" placeholder="Enter password">
-          <div class="error-message" id="signupPasswordError">Please enter your password</div>
-        </div>
-        <button type="submitsignup" class="btn">Sign Up</button>
-      </form>
-    </div>
-  </div>
-        <script src="../css/popupscript.js"></script>
+        <script src="script.js"></script>
     </main>
     <footer>
         <p>Copyright © 2024 Checkmate Company. All rights reserved.</p>

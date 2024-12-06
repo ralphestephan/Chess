@@ -6,8 +6,10 @@
     margin: 20px auto;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    justify-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
-
 .piece-image {
     width: 100%;
     height: 100%;
@@ -15,7 +17,7 @@
     pointer-events: none; /* Allows clicks to pass through the image to the square */
 }
 
-#chessboard {
+.board {
     display: grid;
     grid-template-columns: repeat(8, 50px);
     grid-template-rows: repeat(8, 50px);
@@ -23,11 +25,6 @@
     height: 400px;
     margin: 20px auto;
     border: 2px solid black;
-    transform: rotate(0deg); /* Default for white player */
-}
-
-#chessboard.flipped {
-    transform: rotate(180deg); /* Flip for black player */
 }
 
 .square {
@@ -39,12 +36,26 @@
     cursor: pointer;
 }
 
-#chessboard.flipped .square {
-    transform: rotate(180deg); /* Rotate squares back so they appear normal */
+#chessboard.flipped {
+    transform: rotate(180deg);
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid black;
 }
 
-
-
+#chessboard.flipped .square {
+    transform: rotate(180deg); /* Rotate squares back so they appear normal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .square.white {
     background-color: #f0d9b5;
@@ -89,7 +100,54 @@
     gap: 80px;
 }
 
-
 .container h1 {
     padding-top: 20px;
+}
+
+
+#backButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; 
+    width: 100px;
+}
+
+#backButton:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+
+#auth-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#auth-section button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Padding around the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+#auth-section button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#auth-section button:active {
+    background-color: #3d8f43; /* Darker green when clicked */
+    transform: scale(0.95); /* Slightly shrink when clicked */
 }
